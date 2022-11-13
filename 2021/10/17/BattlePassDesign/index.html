@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>关于竖版手游 Battle Pass 系统设计 | Parzival's Blog</title><meta name="author" content="Parzival"><meta name="copyright" content="Parzival"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="序言这也是大四上秋招的时候拿到的一道笔试题，题目内容是为他们公司的手游补充设计一个赛季通行证（这个游戏的竞技场已经有一个赛季通行证了，他们想在主页面再加一个通行证），考察面试者的系统设计思维。 然而我当时是刚开始面试，显然是太年轻了，想着得认真对待，写了篇比较长的设计文档（不推荐，比较费时间，不如多面几家）。后续的面试也是顺利通过了，但对公司的项目并不是很中意，是做 COC 换皮的数值手游，做的比">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head></head><body><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>关于竖版手游 Battle Pass 系统设计 | Parzival's Blog</title><meta name="author" content="Parzival"><meta name="copyright" content="Parzival"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="序言这也是大四上秋招的时候拿到的一道笔试题，题目内容是为他们公司的手游补充设计一个赛季通行证（这个游戏的竞技场已经有一个赛季通行证了，他们想在主页面再加一个通行证），考察面试者的系统设计思维。 然而我当时是刚开始面试，显然是太年轻了，想着得认真对待，写了篇比较长的设计文档（不推荐，比较费时间，不如多面几家）。后续的面试也是顺利通过了，但对公司的项目并不是很中意，是做 COC 换皮的数值手游，做的比">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于竖版手游 Battle Pass 系统设计">
 <meta property="og:url" content="https://parzival.love/2021/10/17/BattlePassDesign/index.html">
@@ -144,7 +144,7 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3764728_ygh6wgv0md.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/mouse.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/mouse.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><meta name="generator" content="Hexo 6.3.0"><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -644,7 +644,7 @@ if (false) {
       loadTwikoo()
     }
   }
-})()</script></div><script defer="" src="/live2d-widget/autoload.js"></script><script async="" src="//at.alicdn.com/t/c/font_3764728_ygh6wgv0md.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+})()</script></div><script defer="" src="/live2d-widget/autoload.js"></script><script defer="" src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax="" defer="" src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><script defer="" data-pjax="" src="/js/cat.js"></script><canvas id="universe"></canvas><script defer="" src="/js/universe.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
